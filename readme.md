@@ -14,6 +14,7 @@ How to Use
 1. [Deploy chatgpt-demo by Vercel](https://github.com/ddiu8081/chatgpt-demo#deploy-with-vercel)
 
 2. Build chatgpt-demo locally:
+
     git clone git@github.com:ddiu8081/chatgpt-demo.git
     git checkout 2972343607c7cf0a1d17070c0816de12690d0045  # build from this hash!!!
     cd chatgpt-demo
