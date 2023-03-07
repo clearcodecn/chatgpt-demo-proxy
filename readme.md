@@ -15,12 +15,14 @@ How to Use
 
 2. Build chatgpt-demo locally:
 
+```bash
     git clone git@github.com:ddiu8081/chatgpt-demo.git
     git checkout 2972343607c7cf0a1d17070c0816de12690d0045  # build from this hash!!!
     cd chatgpt-demo
     npm run build
     Run reserve proxy:
     cd dist
+```
 
 3. Run reserve proxy:
 
