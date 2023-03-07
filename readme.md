@@ -1,40 +1,36 @@
-#### Reserve proxy for chatgpt-demo projewct
+If you are looking to deploy chatgpt-demo on your server and don't know how to do it, this project can help you out!
 
-If you don't know how to deploy `chatgpt-demo` locally and you want deploy `chatgpt-demo` at your server, you can try this project!
-
-#### Implementation principle
+Implementation Principle
 
 ![https://user-images.githubusercontent.com/34591322/223335950-8af037e8-d3aa-4ea5-ac3d-b5c281dcdc96.png](https://user-images.githubusercontent.com/34591322/223335950-8af037e8-d3aa-4ea5-ac3d-b5c281dcdc96.png)
 
-#### Install 
-If you have go environment, you can install it directly
+Installation
+If you have a Go environment, you can install it directly using:
 
     go get github.com/clearcodecn/chatgpt-demo-proxy
+    
+Alternatively, you can download binaries from the release page.
 
-or you can download binaries at [release page](https://www.baidu.com)
+How to Use
 
+1. [Deploy chatgpt-demo by Vercel](https://github.com/ddiu8081/chatgpt-demo#deploy-with-vercel)
 
-#### How to use
+2. Build chatgpt-demo locally:
 
-1. [deploy `chatgpt-demo` by `Vercel`](https://github.com/ddiu8081/chatgpt-demo#deploy-with-vercel)
+    cd chatgpt-demo
+    npm run build
+    Run reserve proxy:
+    cd dist
 
-2. build `chatgpt-demo` locally  
+3. Run reserve proxy:
+
 
 ```javascript
-   cd chatgpt-demo 
-   npm run build
+# Make sure your binary file name is chatgpt-demo-proxy and already add to $PATH
+chatgpt-demo-proxy --client-dir=./client --port=9999
+
+# If you need a proxy to proxy /api/generate try:
+# chatgpt-demo-proxy --client-dir=./client --port=9999 --proxy=http://127.0.0.0:1080
 ```
 
-3. run reserve proxy
-
-```javascript
-cd dist
-
-# make sure your binary file name is chatgpt-demo-proxy and already add to $PATH
-chatgpt-demo-proxy --client-dir=./client --port=9999 
-
-# if you need a proxy to proxy /api/generate try:
-# chatgpt-demo-proxy --client-dir=./client --port=9999 --proxy=http://127.0.0.0:1080 
-```
-
-4. visit [http://localhost:9999](http://localhost:9999)
+4. Visit [http://localhost:9999](http://localhost:9999) to access the deployed chatgpt-demo project.
